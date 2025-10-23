@@ -39,13 +39,16 @@ export default function Page() {
             href={`/category/${c.slug}`}
             className="card group relative flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
           >
+ <div className="aspect-[4/3] w-full overflow-hidden rounded-xl">
   <Image
-  src={`/images/${c.slug}.jpg`}
-  alt={c.name}
-  width={200}
-  height={130}
-  className="rounded-lg object-cover w-full h-28 group-hover:scale-105 transition-transform duration-300"
-/>
+    src={`/images/${c.slug}.jpg`}
+    alt={c.name}
+    width={800}
+    height={600}
+    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+  />
+</div>
+
 
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-200 flex items-center justify-center">
               <span className="text-white text-xl font-semibold">{c.name}</span>
