@@ -16,12 +16,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <ThemeProvider>
           <div className="min-h-screen flex flex-col">
-            <div className="sticky top-0 z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur border-b border-slate-200 dark:border-slate-800">
-              <div className="container py-2 flex items-center justify-between">
-                <Nav />
-                <ThemeToggle />
-              </div>
-            </div>
+            {!(typeof window !== "undefined" && window.location.pathname === "/") && (
+  <div className="sticky top-0 z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div className="container py-2 flex items-center justify-between">
+      <Nav />
+      <ThemeToggle />
+    </div>
+  </div>
+)}
             <main className="container py-8 flex-1">{children}</main>
             <footer className="container py-10 text-sm text-slate-600 dark:text-slate-400">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
