@@ -13,20 +13,21 @@ export default function Page() {
         </p>
       </section>
 
-      <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+     <section className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {categories.map((c) => (
           <Link
             key={c.slug}
             href={`/category/${c.slug}`}
             className="card group relative flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
           >
-            <Image
-              src={`/images/${c.slug}.jpg`}
-              alt={c.name}
-              width={300}
-              height={200}
-              className="rounded-2xl object-cover w-full h-48"
-            />
+  <Image
+  src={`/images/${c.slug}.jpg`}
+  alt={c.name}
+  width={300}
+  height={180}
+  className="rounded-xl object-cover w-full h-36 group-hover:scale-105 transition-transform duration-300"
+/>
+
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-200 flex items-center justify-center">
               <span className="text-white text-xl font-semibold">{c.name}</span>
             </div>
