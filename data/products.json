@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "anker-soundcore-space",
+    "name": "Anker Soundcore Space",
+    "category": "tech",
+    "rating": 4.4,
+    "price": 99,
+    "summary": "Noise-cancelling on a student budget. Punchy bass, comfy fit, battery for days.",
+    "pros": [
+      "Great ANC for price",
+      "Ridiculous battery life",
+      "USB\u2011C and comfy"
+    ],
+    "cons": [
+      "Plastic-y build",
+      "App nags a bit"
+    ],
+    "affiliate_url": "https://example-affiliate.com/anker-soundcore-space?kw={keyword}&id=PP123"
+  },
+  {
+    "slug": "ninja-air-fryer-max",
+    "name": "Ninja Air Fryer Max",
+    "category": "home-kitchen",
+    "rating": 4.7,
+    "price": 149,
+    "summary": "Crispy chips without the shame. Easy cleanup, reliable, and fast.",
+    "pros": [
+      "Fast preheat",
+      "Dishwasher-safe basket",
+      "Even crisping"
+    ],
+    "cons": [
+      "Takes counter space"
+    ],
+    "affiliate_url": "https://example-affiliate.com/ninja-air-fryer-max?kw={keyword}&id=PP124"
+  },
+  {
+    "slug": "garmin-forerunner-55",
+    "name": "Garmin Forerunner 55",
+    "category": "health-fitness",
+    "rating": 4.5,
+    "price": 169,
+    "summary": "Beginner-friendly GPS watch that doesn\u2019t roast your wallet.",
+    "pros": [
+      "Accurate GPS",
+      "Weeks of battery",
+      "Coach features"
+    ],
+    "cons": [
+      "Basic looks"
+    ],
+    "affiliate_url": "https://example-affiliate.com/garmin-forerunner-55?kw={keyword}&id=PP125"
+  },
+  {
+    "slug": "ps5-dualsense-edge",
+    "name": "PS5 DualSense Edge",
+    "category": "gaming",
+    "rating": 4.2,
+    "price": 209,
+    "summary": "Pro-level paddles, fancy triggers, and yes, it costs like it means business.",
+    "pros": [
+      "Custom profiles",
+      "Great haptics",
+      "Solid build"
+    ],
+    "cons": [
+      "Pricey",
+      "Battery meh"
+    ],
+    "affiliate_url": "https://example-affiliate.com/ps5-dualsense-edge?kw={keyword}&id=PP126"
+  },
+  {
+    "slug": "ring-video-doorbell-4",
+    "name": "Ring Video Doorbell 4",
+    "category": "smart-home",
+    "rating": 4.3,
+    "price": 179,
+    "summary": "Ditch mystery knocks. Crisp video, quick alerts, easy install.",
+    "pros": [
+      "Clear video",
+      "Smart alerts",
+      "Flexible power"
+    ],
+    "cons": [
+      "Subscription needed for history"
+    ],
+    "affiliate_url": "https://example-affiliate.com/ring-video-doorbell-4?kw={keyword}&id=PP127"
+  },
+  {
+    "slug": "dyson-v15-detect",
+    "name": "Dyson V15 Detect",
+    "category": "appliances",
+    "rating": 4.6,
+    "price": 599,
+    "summary": "Laser-guided crumb annihilation. You\u2019ll vacuum for fun, weirdly.",
+    "pros": [
+      "Laser dust reveal",
+      "Strong suction",
+      "Great attachments"
+    ],
+    "cons": [
+      "Pricey",
+      "Wall mount required"
+    ],
+    "affiliate_url": "https://example-affiliate.com/dyson-v15?kw={keyword}&id=PP128"
+  }
+]

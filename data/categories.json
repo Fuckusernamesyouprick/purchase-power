@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "tech",
+    "name": "Tech"
+  },
+  {
+    "slug": "home-kitchen",
+    "name": "Home & Kitchen"
+  },
+  {
+    "slug": "health-fitness",
+    "name": "Health & Fitness"
+  },
+  {
+    "slug": "beauty-grooming",
+    "name": "Beauty & Grooming"
+  },
+  {
+    "slug": "outdoors-travel",
+    "name": "Outdoors & Travel"
+  },
+  {
+    "slug": "smart-home",
+    "name": "Smart Home"
+  },
+  {
+    "slug": "appliances",
+    "name": "Appliances"
+  },
+  {
+    "slug": "gaming",
+    "name": "Gaming"
+  },
+  {
+    "slug": "finance-insurance",
+    "name": "Finance & Insurance"
+  },
+  {
+    "slug": "streaming-subscriptions",
+    "name": "Streaming & Subscriptions"
+  }
+]
