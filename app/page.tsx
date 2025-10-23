@@ -38,24 +38,25 @@ export default function HomePage() {
           className="grid gap-6 sm:gap-8 md:gap-10"
           style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}
         >
-          {categories.map((c) => (
-            <Link
-              key={c.slug}
-              href={`/category/${c.slug}`}
-              className="group relative flex flex-col items-center justify-center rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <img
-                src={c.image}
-                alt={c.name}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+     {categories.map((c) => (
+  <Link
+    key={c.slug}
+    href={`/category/${c.slug}`}
+    className="group relative block aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+  >
+    {/* Image fills the square */}
+    <img
+      src={c.image}
+      alt={c.name}
+      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+    />
 
-              {/* Always-visible overlay text */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-xl font-semibold transition duration-300 group-hover:bg-black/25 group-hover:text-blue-200">
-                {c.name}
-              </div>
-            </Link>
-          ))}
+    {/* Always-visible overlay text */}
+    <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-xl font-semibold transition duration-300 group-hover:bg-black/25 group-hover:text-blue-200">
+      {c.name}
+    </div>
+  </Link>
+))}
         </div>
       </section>
     </main>
