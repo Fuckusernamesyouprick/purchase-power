@@ -8,7 +8,10 @@ export default function Page(){
   return (
     <div className="space-y-10">
       <section className="text-center space-y-4">
-        <h1 className="text-4xl sm:text-5xl font-bold">Purchase Power ⚡</h1>
+        <h1 className="flex items-center justify-center gap-3 text-4xl sm:text-5xl font-bold">
+  <img src="/logo.svg" alt="Purchase Power" className="h-10 w-10 rounded-xl" />
+  <span>Purchase Power</span>
+</h1>
         <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           Honest reviews, slightly cheeky tone, and zero fluff. We test things, we say what’s good,
           and we admit when something’s a bit mid. Power up your next purchase.
