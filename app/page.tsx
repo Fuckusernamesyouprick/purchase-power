@@ -6,14 +6,18 @@ export default function Page() {
   return (
     <div className="space-y-10 text-center">
       <section className="space-y-4">
-     <h1 className="flex items-center justify-center gap-3 text-4xl sm:text-5xl font-bold text-blue-600 dark:text-blue-400">
+     <h1
+  className="flex items-center justify-center gap-3 text-5xl sm:text-6xl font-extrabold tracking-tight text-blue-600 dark:text-blue-400 font-sans"
+  style={{ fontFamily: `'Poppins', 'Inter', 'Segoe UI', sans-serif` }}
+>
   <img
     src="/logo.svg"
     alt="Purchase Power"
-    className="h-12 w-12 rounded-2xl"
+    className="h-14 w-14 rounded-2xl"
   />
-  <span>Purchase Power</span>
+  <span className="font-semibold">Purchase Power</span>
 </h1>
+
 
 
 
