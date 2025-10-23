@@ -27,7 +27,8 @@ export default function Page() {
         </p>
       </section>
 
-     <section className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+   <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 px-2">
+
         {categories.map((c) => (
           <Link
             key={c.slug}
@@ -37,9 +38,9 @@ export default function Page() {
   <Image
   src={`/images/${c.slug}.jpg`}
   alt={c.name}
-  width={300}
-  height={180}
-  className="rounded-xl object-cover w-full h-36 group-hover:scale-105 transition-transform duration-300"
+  width={200}
+  height={130}
+  className="rounded-lg object-cover w-full h-28 group-hover:scale-105 transition-transform duration-300"
 />
 
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-200 flex items-center justify-center">
