@@ -32,10 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   © {new Date().getFullYear()} Purchase Power — built for smart
                   shoppers.
                 </p>
-                <p>
-                  Affiliate links may earn us a small commission at no extra
-                  cost to you.
-                </p>
+            
               </div>
               <script src="/midas.js" defer></script>
               <script
