@@ -27,7 +27,11 @@ export default function Page() {
         </p>
       </section>
 
-   <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 px-2">
+  <section
+  className="grid gap-4 px-2"
+  style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}
+>
+
 
         {categories.map((c) => (
           <Link
