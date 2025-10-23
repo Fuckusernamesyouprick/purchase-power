@@ -7,10 +7,6 @@ import ThemeProvider from "@/components/ThemeProvider";
 import ThemeToggle from "@/components/ThemeToggle";
 import { usePathname } from "next/navigation";
 
-export const metadata = {
-  title: "Purchase Power",
-  description: "Power up your buying decisions with honest reviews and smart picks.",
-};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
