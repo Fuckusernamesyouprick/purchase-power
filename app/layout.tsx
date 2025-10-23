@@ -17,6 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ThemeProvider>
           <div className="min-h-screen flex flex-col">
             {!(typeof window !== "undefined" && window.location.pathname === "/") && (
+ {!(typeof window !== "undefined" && window.location.pathname === "/") && (
   <div className="sticky top-0 z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur border-b border-slate-200 dark:border-slate-800">
     <div className="container py-2 flex items-center justify-between">
       <Nav />
