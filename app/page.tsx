@@ -4,58 +4,88 @@ import Link from "next/link";
 import categories from "@/data/categories.json";
 
 export default function HomePage() {
+  // basic colors
+  const blue600 = "#2563eb";
+  const blue200 = "#bfdbfe";
+
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-gray-100">
-      {/* Logo + Hero Section */}
-      <section className="flex flex-col items-center justify-center py-16 text-center">
-        <div className="flex items-center gap-3 mb-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-10 h-10 text-blue-600 dark:text-blue-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 10V3L4 14h7v7l9-11h-7z"
-            />
+    <main style={{ minHeight: "100vh", background: "#ffffff", color: "#0f172a" }}>
+      {/* Hero */}
+      <section style={{ padding: "64px 16px", textAlign: "center" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+          <svg width="40" height="40" viewBox="0 0 24 24" stroke={blue600} fill="none">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Purchase Power
-          </h1>
+          <h1 style={{ margin: 0, fontSize: "40px", fontWeight: 800 }}>Purchase Power</h1>
         </div>
-        <p className="text-lg max-w-2xl text-gray-600 dark:text-gray-400">
+        <p style={{ margin: "8px auto 0", maxWidth: 640, fontSize: 18, color: "#475569" }}>
           Empowering smarter buying decisions — honest reviews, powerful picks.
         </p>
       </section>
 
       {/* Category Grid */}
-      <section className="px-6 pb-20">
+      <section style={{ padding: "0 24px 80px" }}>
         <div
-          className="grid gap-6 sm:gap-8 md:gap-10"
           style={{
+            display: "grid",
+            gap: 24,
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           }}
         >
-          {categories.map((c) => (
+          {categories.map((c: any) => (
             <Link
               key={c.slug}
               href={`/category/${c.slug}`}
-              className="group relative block aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+              style={{
+                position: "relative",
+                display: "block",
+                aspectRatio: "1 / 1", // perfect square
+                borderRadius: 16,
+                overflow: "hidden",
+                boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+                textDecoration: "none",
+              }}
             >
-              {/* Background image fills the square */}
+              {/* Background image layer */}
               <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-                style={{ backgroundImage: `url(${c.image})` }}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  backgroundImage: `url(${c.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  transform: "scale(1)",
+                  transition: "transform 300ms ease",
+                }}
+                className="pp-bg"
               />
 
-              {/* Always-visible overlay text */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-xl font-semibold transition duration-300 group-hover:bg-black/25 group-hover:text-blue-200">
+              {/* Overlay text (always visible) */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "rgba(0,0,0,0.40)",
+                  color: "#ffffff",
+                  fontSize: 20,
+                  fontWeight: 700,
+                  transition: "background 300ms ease, color 300ms ease",
+                  textAlign: "center",
+                  padding: "0 8px",
+                }}
+                className="pp-overlay"
+              >
                 {c.name}
               </div>
+
+              {/* Simple hover via a tiny inline scriptless CSS hack */}
+              <style jsx>{`
+                a:hover .pp-bg { transform: scale(1.05); }
+                a:hover .pp-overlay { background: rgba(0,0,0,0.25); color: ${blue200}; }
+              `}</style>
             </Link>
           ))}
         </div>
