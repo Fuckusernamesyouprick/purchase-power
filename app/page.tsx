@@ -1,30 +1,38 @@
-
-import products from "@/data/products.json";
-import ProductCard from "@/components/ProductCard";
+import categories from "@/data/categories.json";
+import Image from "next/image";
 import Link from "next/link";
 
-export default function Page(){
-  const featured = products.slice(0,4);
+export default function Page() {
   return (
-    <div className="space-y-10">
-      <section className="text-center space-y-4">
-        <h1 className="flex items-center justify-center gap-3 text-4xl sm:text-5xl font-bold">
-  <img src="/logo.svg" alt="Purchase Power" className="h-10 w-10 rounded-xl" />
-  <span>Purchase Power</span>
-</h1>
+    <div className="space-y-10 text-center">
+      <section className="space-y-4">
+        <h1 className="text-4xl sm:text-5xl font-bold">Purchase Power ⚡</h1>
         <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-          Honest reviews, slightly cheeky tone, and zero fluff. We test things, we say what’s good,
-          and we admit when something’s a bit mid. Power up your next purchase.
+          Pick a category below and power up your next purchase. 
+          Each one’s got honest reviews and a bit of cheek.
         </p>
-        <div className="flex items-center justify-center gap-3">
-          <Link href="/category/tech" className="btn btn-primary">Start with Tech</Link>
-          <Link href="/category/home-kitchen" className="btn btn-ghost">Explore Categories</Link>
-        </div>
       </section>
 
       <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {featured.map(p => <ProductCard key={p.slug} p={p} />)}
+        {categories.map((c) => (
+          <Link
+            key={c.slug}
+            href={`/category/${c.slug}`}
+            className="card group relative flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-200"
+          >
+            <Image
+              src={`/images/${c.slug}.jpg`}
+              alt={c.name}
+              width={300}
+              height={200}
+              className="rounded-2xl object-cover w-full h-48"
+            />
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-200 flex items-center justify-center">
+              <span className="text-white text-xl font-semibold">{c.name}</span>
+            </div>
+          </Link>
+        ))}
       </section>
     </div>
-  )
+  );
 }
