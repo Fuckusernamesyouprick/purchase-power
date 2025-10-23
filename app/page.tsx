@@ -30,34 +30,29 @@ export default function Page() {
         className="grid gap-4 px-2"
         style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}
       >
-       <section
-  className="grid gap-4 px-2"
-  style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}
->
-  {categories.map((c) => (
-    <Link
-      key={c.slug}
-      href={`/category/${c.slug}`}
-      className="group relative flex flex-col items-center justify-center rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl"
-    >
-      <div className="aspect-[4/3] w-full overflow-hidden">
-        <Image
-          src={`/images/${c.slug}.jpg`}
-          alt={c.name}
-          width={800}
-          height={600}
-          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span className="text-white text-xl font-semibold drop-shadow-lg">
-            {c.name}
-          </span>
-        </div>
-      </div>
-    </Link>
-  ))}
-</section>
-
+        {categories.map((c) => (
+          <Link
+            key={c.slug}
+            href={`/category/${c.slug}`}
+            className="group relative flex flex-col items-center justify-center rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl"
+          >
+            <div className="aspect-[4/3] w-full overflow-hidden">
+              <Image
+                src={`/images/${c.slug}.jpg`}
+                alt={c.name}
+                width={800}
+                height={600}
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white text-xl font-semibold drop-shadow-lg">
+                  {c.name}
+                </span>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </section>
     </div>
   );
 }
