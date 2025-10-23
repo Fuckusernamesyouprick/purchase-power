@@ -6,10 +6,10 @@ export default function Page() {
   return (
     <div className="space-y-10 text-center">
       <section className="space-y-4">
-       <h1 className="flex items-center justify-center gap-3 text-4xl sm:text-5xl font-bold">
-  <img src="/logo.svg" alt="Purchase Power" className="h-10 w-10 rounded-xl" />
-  <span>Purchase Power</span>
+     <h1 className="flex items-center justify-center text-4xl sm:text-5xl font-bold">
+  <img src="/logo.svg" alt="Purchase Power" className="h-14 w-14 rounded-2xl" />
 </h1>
+
 
         <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           Pick a category below and power up your next purchase. 
